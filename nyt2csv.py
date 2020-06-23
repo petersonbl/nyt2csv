@@ -78,6 +78,7 @@ def nyt2csv(api, q, start_year, end_year):
                     retry = False
                 else:
                     print("Ending script due to error")
+                    exit()
             time.sleep(10)
     end_time = time.time()
     run_time = end_time - start_time
@@ -85,10 +86,19 @@ def nyt2csv(api, q, start_year, end_year):
 
 
 if __name__ == "__main__":
-    API = ''  # Enter your NYT Developers API Key Here
-    Q = ''  # Enter your query here 
-    START_YEAR = 1950
-    END_YEAR = 2020
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("search_term")
+    parser.add_argument("start_year")
+    parser.add_argument("end_year")
+    args = parser.parse_args()
+    API = ''  # Enter your nytimes developer key here
+    Q = str(args.search_term)
+    START_YEAR = int(args.start_year)
+    END_YEAR = int(args.end_year)
     nyt2csv(API, Q, START_YEAR, END_YEAR)
+
+
+
 
 
