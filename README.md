@@ -1,4 +1,7 @@
 # nyt2csv
+
+ACTIVITY DEVELOPMENT OF THIS PROJECT HAS MOVED TO: https://github.com/sppauley/nyt-detroit
+
 A python script for creating csv files of New York Times articles through the use of the New York Times API.
 
 The script is mostly intended for use in my own research, but I thought someone else might have a use for it and it was worth sharing.
